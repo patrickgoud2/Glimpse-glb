@@ -1,12 +1,7 @@
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Spectral by HTML5 UP</title>
+		<title>Glimpse GLB - Meta Quest Viewer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -14,12 +9,10 @@
 	</head>
 	<body class="landing is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+		<div id="page-wrapper">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Spectral</a></h1>
+				<header id="header" class="alt">
+						<h1><a href="index.html">Glimpse GLB</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
@@ -27,10 +20,9 @@
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
+											<li><a href="#one">Why GLB?</a></li>
+											<li><a href="#two">Features</a></li>
+											<li><a href="#controls">Controls</a></li>
 										</ul>
 									</div>
 								</li>
@@ -38,122 +30,140 @@
 						</nav>
 					</header>
 
-				<!-- Banner -->
-					<section id="banner">
-    <div class="inner">
-        <h2>Glimpse glTF</h2>
-        <p>A GLB viewer for Meta Quest<br />
-        View your 3D models in standalone VR or AR.</p>
-        <ul class="actions special">
-            <li><a href="#one" class="button primary">Get Started</a></li>
-        </ul>
-    </div>
-</section>
-
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-    <div class="inner">
-        <header class="major">
-            <h2>Why Glimpse glTF?</h2>
-            <p>I found it difficult to find a 3D model viewer for the Quest 3 that made it easy to get models onto the headset. I chose <b>GLB</b> exclusively because it embeds all textures, animations, and materials (albedo, metal, gloss, lightmaps) in one file.</p>
-        </header>
-    </div>
-</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-								<h2>Magna primis lobortis<br />
-								sed ullamcorper</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-								<h2>Tortor dolore feugiat<br />
-								elementum magna</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-								<h2>Augue eleifend aliquet<br />
-								sed condimentum</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
-							</div>
-						</section>
+				<section id="banner">
+						<div class="inner">
+							<h2>Glimpse GLB</h2>
+							<p>A GLB viewer for Meta Quest<br />
+							View your 3D models in standalone VR or AR.</p>
+							<ul class="actions special">
+								<li><a href="#one" class="button primary">Get Started</a></li>
+							</ul>
+						</div>
+						<a href="#one" class="more scrolly">Learn More</a>
 					</section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style3 special">
+				<section id="one" class="wrapper style1 special">
 						<div class="inner">
 							<header class="major">
-								<h2>Accumsan mus tortor nunc aliquet</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-								fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+								<h2>Why Glimpse GLB?</h2>
+								<p>Before I made this app, I found it difficult to find a 3D model viewer for the Quest 3 and get the models on the headset. I had to make some choices for the easiest workflow.</p>
+                                <br>
+                                <h3>Why GLB specifically?</h3>
+                                <p>I chose GLB exclusively over FBX and OBJ because GLB embeds all textures and materials in the file. Most applications can export GLB, it can have animations, and it supports albedo, metal, gloss, and lightmaps.</p>
+							</header>
+							<ul class="icons major">
+								<li><span class="icon solid fa-cube major style1"><span class="label">GLB</span></span></li>
+								<li><span class="icon solid fa-vr-cardboard major style2"><span class="label">VR</span></span></li>
+								<li><span class="icon solid fa-wifi major style3"><span class="label">Offline</span></span></li>
+							</ul>
+						</div>
+					</section>
+
+				<section id="two" class="wrapper alt style2">
+						
+                        <section class="spotlight">
+							<div class="image"><img src="images/pic01.jpg" alt="Loading Models" /></div><div class="content">
+								<h2>Loading Models<br />
+								Local Files & Preparation</h2>
+								<p>Loading files directly from the internet is possible, but typing long URLs in VR is annoying. Therefore, Glimpse GLB focuses on local files. Here are the easiest ways to transfer them:</p>
+                                <ul>
+                                    <li><b>Google Drive:</b> Open the Quest browser, head to your drive, and save the GLB to your downloads folder.</li>
+                                    <li><b>Sketchfab:</b> Find the GLB file you like in the browser, and save the file to downloads.</li>
+                                    <li><b>USB Cable:</b> Connect your headset to your computer. Click "Allow access to data" in the headset. Copy your files to the Quest 'Download' folder via your PC explorer.</li>
+                                </ul>
+							</div>
+						</section>
+                        
+                        <section class="spotlight">
+							<div class="image"><img src="images/pic02.jpg" alt="Environment" /></div><div class="content">
+								<h2>Environment & AR<br />
+								Passthrough Mode</h2>
+								<p>Control the atmosphere of your viewing experience. The environment panels enable you to switch the lighting and environment of the model.</p>
+                                <p>You can toggle the <b>Augmented Reality space</b> (Passthrough mode) to see the model in your own room, or switch between a Skybox or Sun & Sky. Use the lighting slider to give you more control over the appearance.</p>
+							</div>
+						</section>
+
+                        <section class="spotlight">
+							<div class="image"><img src="images/pic03.jpg" alt="Interaction" /></div><div class="content">
+								<h2>Interaction & Hierarchy<br />
+								Total Control</h2>
+								<p>Interact fully with your 3D objects. You can move, click, and adjust materials on the fly.</p>
+                                <p>Need to see inside? Show or hide parts in the hierarchy. You can also scale models from tabletop size up to 1:1 scale for a realistic experience.</p>
+							</div>
+						</section>
+					</section>
+
+				<section id="three" class="wrapper style3 special">
+						<div class="inner">
+							<header class="major">
+								<h2>Key Features</h2>
+								<p>Everything you need to inspect your 3D work on the Meta Quest.</p>
 							</header>
 							<ul class="features">
-								<li class="icon fa-paper-plane">
-									<h3>Arcu accumsan</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon solid fa-hand-pointer">
+									<h3>User Interface</h3>
+									<p>Tutorial walkthroughs, toggleable UI panels, and easy teleport/reset functions.</p>
 								</li>
-								<li class="icon solid fa-laptop">
-									<h3>Ac Augue Eget</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon solid fa-cubes">
+									<h3>Object Interaction</h3>
+									<p>Move, scale (Tabletop vs 1:1), modify materials, and toggle hierarchy visibility.</p>
 								</li>
-								<li class="icon solid fa-code">
-									<h3>Mus Scelerisque</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon solid fa-eye">
+									<h3>Environment</h3>
+									<p>Toggle Augmented Reality (Passthrough), change Skyboxes, time of day, and lighting grids.</p>
 								</li>
-								<li class="icon solid fa-headphones-alt">
-									<h3>Mauris Imperdiet</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-heart">
-									<h3>Aenean Primis</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-								</li>
-								<li class="icon fa-flag">
-									<h3>Tortor Ut</h3>
-									<p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+								<li class="icon solid fa-download">
+									<h3>Easy Loading</h3>
+									<p>Support for Google Drive, Sketchfab, and USB transfer to local storage.</p>
 								</li>
 							</ul>
 						</div>
 					</section>
 
-				<!-- CTA -->
-					<section id="cta" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2>Arcue ut vel commodo</h2>
-								<p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="#" class="button fit primary">Activate</a></li>
-								<li><a href="#" class="button fit">Learn More</a></li>
-							</ul>
-						</div>
-					</section>
+                <section id="controls" class="wrapper style4">
+                        <div class="inner">
+                            <header class="major">
+                                <h2>Tutorial & Controls</h2>
+                                <p>How to navigate and use Glimpse GLB</p>
+                            </header>
 
-				<!-- Footer -->
-					<footer id="footer">
+                            <div class="row">
+                                <div class="col-6 col-12-medium">
+                                    <h3>🎮 Navigation</h3>
+                                    <p><b>Right Joystick:</b> Press to teleport (aim and release). Tilt to turn left/right.<br>
+                                    <b>Left Joystick:</b> Use to move/walk smoothly.<br>
+                                    <b>Start Point:</b> Clicking on the start point will reset you to the origin.</p>
+                                    
+                                    <h3>🛠 Menu Panels</h3>
+                                    <p><b>Triggers:</b> Interact with buttons and sliders.<br>
+                                    <b>Grip Button:</b> Hold to grab and rearrange UI panels.<br>
+                                    <b>"B" Button:</b> Show or hide all panels instantly.</p>
+                                </div>
+                                <div class="col-6 col-12-medium">
+                                    <h3>📐 Transform Panel</h3>
+                                    <p>Use the dropdown to switch between <b>Position</b>, <b>Rotation</b>, and <b>Scale</b>. Enable visual aids to help arrange your model perfectly.</p>
+
+                                    <h3>💡 Environment</h3>
+                                    <p>Use the dropdown to switch between Skybox, Sun & Sky, or <b>Passthrough (Mixed Reality)</b>. Use the lighting slider to fine-tune brightness.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+				<footer id="footer">
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
 							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
 						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+							<li>&copy; Glimpse GLB</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 						</ul>
 					</footer>
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
@@ -162,6 +172,4 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
-
 </html>
-
