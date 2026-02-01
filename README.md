@@ -46,7 +46,11 @@ Getting 3D models onto a standalone headset can be a friction-heavy process. **G
 ## 🚀 Getting Started
 
 ### 1. Installation
-Download the latest `.apk` from the [Releases Page](https://github.com/patrickgoud2/Glimpse-glb/releases) and install it using SideQuest or Meta Quest Developer Hub.
+Glimpse GLB is available directly on the **Meta Horizon Store**. You can install it on your Quest without sideloading.
+
+[![Get it on Meta Quest](https://img.shields.io/badge/Meta%20Quest-Available%20on%20Store-blue?style=for-the-badge&logo=meta)](https://www.meta.com/nl-nl/experiences/glimpse-glb/25467602739525995/)
+
+> **[Click here to download Glimpse GLB](https://www.meta.com/nl-nl/experiences/glimpse-glb/25467602739525995/)**
 
 ### 2. Loading Models
 Glimpse GLB looks for files in your headset's `Download` folder. Here is the easiest way to get them there:
