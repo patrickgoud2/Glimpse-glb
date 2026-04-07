@@ -1,270 +1,346 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Glimpse 3D - Meta Quest Model Viewer</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		
-		<meta name="description" content="The easiest way to view GLB, FBX, OBJ, and STL 3D models on Meta Quest 3. Free standalone viewer with Passthrough, Mixed Reality, and local file support." />
-		<meta name="keywords" content="Glimpse 3D, Glimpse GLB, Meta Quest 3, FBX Viewer, OBJ Viewer, STL Viewer, glTF, VR, Mixed Reality, 3D Model Viewer, SideQuest, Offline VR" />
-		<meta name="author" content="Patrick Goud" />
-		<meta name="google-site-verification" content="RhLmaU_P08wY4AKnQX7R-oVHyxd0PD5qjVI_t1P055w" />
-		
-		<meta property="og:title" content="Glimpse 3D - The Essential Quest Viewer" />
-		<meta property="og:description" content="Visualize GLB, FBX, OBJ, and STL assets in standalone VR & Mixed Reality." />
-		<meta property="og:image" content="https://patrickgoud2.github.io/Glimpse-glb/images/pic01.jpg" />
-		<meta property="og:url" content="https://patrickgoud2.github.io/Glimpse-glb/" />
-		<meta property="og:type" content="website" />
-		
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glimpse 3D | Meta Quest Model Viewer</title>
+    <meta name="description" content="Visualize GLB, FBX, OBJ, and STL assets in standalone VR & Mixed Reality on the Meta Quest.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background atmospheric effects -->
+    <div class="bg-effects">
+        <div class="glow orb-1"></div>
+        <div class="glow orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
 
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="landing is-preload">
+    <!-- Navigation -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"></span>
+                Glimpse <span class="logo-highlight">3D</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#showcase">Videos</a>
+                <a href="#roadmap">Roadmap</a>
+                <a href="#support">Support</a>
+            </nav>
+            <a href="https://www.meta.com/nl-nl/experiences/glimpse-glb/25467602739525995/" target="_blank" class="btn btn-primary nav-btn">Get on Meta Quest</a>
+            <button class="mobile-menu-btn" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
 
-		<div id="page-wrapper">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-container pb-x">
+                <div class="hero-content fade-in-up">
+                    <div class="badge">Meta Quest Exclusive</div>
+                    <h1 class="hero-title">Your Essential<br><span class="text-gradient">3D Model Viewer</span><br>in Virtual Reality</h1>
+                    <p class="hero-subtitle">Visualize GLB, FBX, OBJ, and STL assets in standalone VR & Mixed Reality. No cables required. No cloud dependencies.</p>
+                    <div class="hero-cta">
+                        <a href="https://www.meta.com/nl-nl/experiences/glimpse-glb/25467602739525995/" target="_blank" class="btn btn-primary btn-lg shine-effect">
+                            Download Now
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                        </a>
+                        <a href="#showcase" class="btn btn-secondary btn-lg">
+                            Watch Demos
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in-up delay-2">
+                    <div class="glass-card visual-card">
+                        <div class="status-bar">
+                            <span class="status-dot red"></span><span class="status-dot yellow"></span><span class="status-dot green"></span>
+                        </div>
+                        <div class="visual-content">
+                            <!-- Visual representation of the app -->
+                            <div class="wireframe-model">
+                                <div class="cube loader">
+                                    <div class="face front">GLB</div>
+                                    <div class="face back">FBX</div>
+                                    <div class="face right">OBJ</div>
+                                    <div class="face left">STL</div>
+                                    <div class="face top"></div>
+                                    <div class="face bottom"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				<header id="header" class="alt">
-						<h1><a href="index.html">Glimpse 3D</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="#one">Why Glimpse?</a></li>
-											<li><a href="#two">Features</a></li>
-											<li><a href="#roadmap">Future & Roadmap</a></li>
-											<li><a href="#controls">Controls</a></li>
-											<li><a href="support.html">Support Center</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+        <!-- Features Section -->
+        <section class="features section" id="features">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">Core Capabilities</h2>
+                    <p class="section-desc">Built for professionals and enthusiasts alike. Everything you need for efficient 3D inspection.</p>
+                </div>
 
-				<section id="banner">
-						<div class="inner">
-							<div style="display: flex; align-items: center; justify-content: center; gap: 20px; margin-bottom: 20px;">
-								
-								<img src="images/logo2.png" alt="Glimpse 3D Logo" style="width: auto; height: 80px;" />
-								
-								<h2 style="margin: 0;">Glimpse 3D</h2>
-								
-							</div>
-							<p>The Essential 3D Model Viewer for Meta Quest<br />
-							Visualize <b>GLB, FBX, OBJ, and STL</b> in standalone VR & Mixed Reality.<br />
-							No cables required. No cloud dependencies.</p>
-							
-							<ul class="actions special">
-								<li><a href="https://www.meta.com/nl-nl/experiences/glimpse-glb/25467602739525995/" target="_blank" class="button primary icon solid fa-download">Get on Meta Quest</a></li>
-							</ul>
-							</div>
-						<a href="#one" class="more scrolly">Learn More</a>
-					</section>
+                <div class="features-grid">
+                    <div class="feature-card glass tilt-effect fade-in fade-up">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h4l3-9 5 18 3-9h5"/></svg>
+                        </div>
+                        <h3>High-Fidelity</h3>
+                        <p>Support for albedo, metalness, roughness, and lightmaps for ultra-realistic rendering directly on your standalone headset.</p>
+                    </div>
 
-				<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Streamline Your 3D Workflow</h2>
-								<p>Getting 3D models onto a standalone headset can be a friction-heavy process. Glimpse removes the barriers by supporting the formats you already use.</p>
-								<br>
-								<h3>Optimized for GLB, Built for Versatility</h3>
-								<p>While we recommend the <b>GLB format</b> for its efficiency and all-in-one portability (textures & animation), Glimpse now supports <b>FBX, OBJ, and STL</b> to ensure your existing assets are always viewable in VR.</p>
-							</header>
-							<ul class="icons major">
-								<li><span class="icon solid fa-cube major style1"><span class="label">GLB Standard</span></span></li>
-								<li><span class="icon solid fa-layer-group major style2"><span class="label">Multi-Format</span></span></li>
-								<li><span class="icon solid fa-bolt major style3"><span class="label">Fast Loading</span></span></li>
-							</ul>
-						</div>
-					</section>
+                    <div class="feature-card glass tilt-effect fade-in fade-up delay-1">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg>
+                        </div>
+                        <h3>Animation & Morphs</h3>
+                        <p>Experience full control over complex skeletal animations and detailed Morph Targets (Blend Shapes).</p>
+                    </div>
 
-				<section id="two" class="wrapper alt style2">
-						
-						<section class="spotlight">
-							<div class="image"><img src="images/file_system.jpg" alt="Loading Models" /></div><div class="content">
-								<h2>Seamless Local<br />
-								File Management</h2>
-								<p>Typing long URLs in VR is a thing of the past. Glimpse focuses on a "Local First" approach for instant loading times and privacy.</p>
-								<ul>
-									<li><b>Cloud Downloads:</b> Open the Quest Browser, log into Drive/Sketchfab, download your file, and launch Glimpse.</li>
-									<li><b>Multi-Format:</b> Support for .glb, .fbx, .obj, and .stl files.</li>
-									<li><b>USB Transfer:</b> Drag-and-drop files from your PC directly to the Quest via USB.</li>
-								</ul>
-							</div>
-						</section>
-						
-						<section class="spotlight">
-							<div class="image"><img src="images/pic06.jpg" alt="Environment" /></div><div class="content">
-								<h2>Environment &<br />
-								Mixed Reality</h2>
-								<p>View your models in your physical room using the Quest’s high-res <b>Passthrough (MR)</b> mode, or switch to a full virtual studio.</p>
-								<p>Includes adjustable shadow planes, customizable reflection probes, and dynamic sun/lighting controls to match your artistic vision.</p>
-							</div>
-						</section>
+                    <div class="feature-card glass tilt-effect fade-in fade-up delay-2">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
+                        </div>
+                        <h3>Mixed Reality</h3>
+                        <p>Toggle Passthrough dynamically to place your 3D objects directly in your living room or office space.</p>
+                    </div>
 
-						<section class="spotlight">
-							<div class="image"><img src="images/interface.jpg" alt="Interaction" /></div><div class="content">
-								<h2>Precision Interaction<br />
-								& Inspection</h2>
-								<p>A user interface that stays out of your way. Enjoy precise movement and rotation controls via controller input.</p>
-								<p>Switch instantly between <b>'Tabletop Mode'</b> for inspection and <b>'1:1 Scale'</b> for real-world context validation.</p>
-							</div>
-						</section>
-					</section>
+                    <div class="feature-card glass tilt-effect fade-in fade-up delay-3">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h14a2 2 0 0 0 2-2V7l-5-5H6a2 2 0 0 0-2 2v4"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="m3 15 2 2 4-4"/></svg>
+                        </div>
+                        <h3>Multi-Format Support</h3>
+                        <p>Fully supporting FBX (Rigged), OBJ (Static), and STL (3D Printing) alongside the standard GLB format.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				<section id="three" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Core Capabilities</h2>
-								<p>Built for professionals and enthusiasts alike.</p>
-							</header>
-							<ul class="features">
-								<li class="icon solid fa-gem">
-									<h3>High-Fidelity</h3>
-									<p>Support for albedo, metalness, roughness, and lightmaps for realistic rendering.</p>
-								</li>
-								<li class="icon solid fa-play-circle">
-									<h3>Animation & Morphs</h3>
-									<p>Full control over skeletal animations and Morph Targets (Blend Shapes).</p>
-								</li>
-								<li class="icon solid fa-eye">
-									<h3>Mixed Reality</h3>
-									<p>Toggle Passthrough to place 3D objects directly in your living room or office.</p>
-								</li>
-								<li class="icon solid fa-folder-open">
-									<h3>Multi-Format</h3>
-									<p>Now supporting FBX (Rigged), OBJ (Static), and STL (3D Printing) alongside GLB.</p>
-								</li>
-							</ul>
-						</div>
-					</section>
+        <!-- Showcase / Video Section -->
+        <section class="showcase section" id="showcase">
+            <div class="container">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">See Glimpse in Action</h2>
+                    <p class="section-desc">Watch how Glimpse streamlines your 3D workflow and enables mixed reality visualization.</p>
+                </div>
 
-				<section id="roadmap" class="wrapper style4">
-						<div class="inner">
-							<header class="major">
-								<h2>Future Development</h2>
-								<p>We are actively developing the next generation of Glimpse.</p>
-							</header>
-							<div class="content">
-								<p>Glimpse is growing from a hobby project into a professional tool. Upcoming features for the Pro version include:</p>
-								<div class="row">
-									<div class="col-6 col-12-medium">
-										<ul class="alt">
-											<li><b>Hand Tracking 2.0:</b> Ditch the controllers and manipulate objects with natural gestures.</li>
-											<li><b>Multi-Model Staging:</b> Load and arrange multiple files to create complete scenes.</li>
-										</ul>
-									</div>
-									<div class="col-6 col-12-medium">
-										<ul class="alt">
-											<li><b>Hierarchy Explorer:</b> Deep dive into your model's node structure with visibility toggles.</li>
-											<li><b>Pro Environments:</b> Exclusive access to studio-grade lighting setups.</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</section>
+                <div class="video-grid">
+                    <!-- Video Card 1 -->
+                    <div class="video-card glass fade-in">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/4uBXCP-bDuM/hqdefault.jpg')">
+                            <div class="play-btn"></div>
+                            <div class="duration">6:29</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Finally! The Easiest Way to View 3D Models on Meta Quest</h3>
+                            <a href="https://youtu.be/4uBXCP-bDuM" target="_blank" class="watch-link">Watch on YouTube ↗</a>
+                        </div>
+                    </div>
 
-				<section id="controls" class="wrapper style5">
-						<div class="inner">
-							<h3>🎮 Quick Guide & Controls</h3>
-							<div class="row">
-								<div class="col-6 col-12-medium">
-									<h4>Navigation</h4>
-									<p><b>Right Joystick:</b> Teleport (aim & release) / Turn.<br>
-									<b>Left Joystick:</b> Smooth walk.<br>
-									<b>Start Point:</b> Click to reset position.</p>
-								</div>
-								<div class="col-6 col-12-medium">
-									<h4>Interaction</h4>
-									<p><b>Triggers:</b> Use UI / Grab sliders.<br>
-									<b>Grip Button:</b> Move UI panels.<br>
-									<b>"B" Button:</b> Toggle UI visibility.</p>
-								</div>
-							</div>
-						</div>
-					</section>
+                    <!-- Video Card 2 -->
+                    <div class="video-card glass fade-in delay-1">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/o1g9DUkBI7g/hqdefault.jpg')">
+                            <div class="play-btn"></div>
+                            <div class="duration">2:51</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Glimpse GLB Tutorial</h3>
+                            <a href="https://youtu.be/o1g9DUkBI7g" target="_blank" class="watch-link">Watch on YouTube ↗</a>
+                        </div>
+                    </div>
 
-				<section id="support" class="wrapper style3 special">
-					<div class="inner">
-						<header class="major">
-							<h2>Community Driven Development</h2>
-							<p>Glimpse is built with the help of user feedback.<br>
-							Help us squash bugs or vote on the next feature.</p>
-						</header>
-						
-						<div class="row">
-							<div class="col-6 col-12-medium">
-								<span class="icon solid major fa-lightbulb"></span>
-								<h3>Have an idea?</h3>
-								<p>Missing a feature? Check if it's already requested or start a new discussion.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/patrickgoud2/Glimpse-glb/issues/new?template=feature_request.md" target="_blank" class="button primary fit">Request Feature</a></li>
-								</ul>
-							</div>
+                    <!-- Video Card 3 -->
+                    <div class="video-card glass fade-in delay-2">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/0zk_73ZITiA/hqdefault.jpg')">
+                            <div class="play-btn"></div>
+                            <div class="duration">1:41</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Mixed reality with custom 3D models on Meta Quest 3</h3>
+                            <a href="https://youtu.be/0zk_73ZITiA" target="_blank" class="watch-link">Watch on YouTube ↗</a>
+                        </div>
+                    </div>
 
-							<div class="col-6 col-12-medium">
-								<span class="icon solid major fa-bug"></span>
-								<h3>Found a bug?</h3>
-								<p>Is something not working on your Quest? Let me know so I can fix it.</p>
-								<ul class="actions special">
-									<li><a href="https://github.com/patrickgoud2/Glimpse-glb/issues/new?template=bug_report.md" target="_blank" class="button fit">Report Bug</a></li>
-								</ul>
-							</div>
-						</div>
-						
-						<br /><br />
-						
-						<p>Want to see exactly what I am working on right now?</p>
-						<ul class="actions special">
-							<li><a href="https://github.com/users/patrickgoud2/projects/1" target="_blank" class="button small">View Roadmap Board</a></li>
-						</ul>
+                    <!-- Video Card 4 -->
+                    <div class="video-card glass fade-in">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/UwnLiUpsmUk/hqdefault.jpg')">
+                            <div class="play-btn"></div>
+                            <div class="duration">1:41</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Different lighting methods in Glimpse GLB</h3>
+                            <a href="https://youtu.be/UwnLiUpsmUk" target="_blank" class="watch-link">Watch on YouTube ↗</a>
+                        </div>
+                    </div>
 
-					</div>
-				</section>
+                    <!-- Video Card 5 -->
+                    <div class="video-card glass fade-in delay-1">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/qfGhpy7vPtg/hqdefault.jpg')">
+                            <div class="play-btn"></div>
+                            <div class="duration">1:01</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Moving, rotating and scaling objects in Glimpse GLB</h3>
+                            <a href="https://youtu.be/qfGhpy7vPtg" target="_blank" class="watch-link">Watch on YouTube ↗</a>
+                        </div>
+                    </div>
 
-				<section id="cta" class="wrapper style4">
-					<div class="inner">
-						<header>
-							<h2>Support Development</h2>
-							<p>Glimpse is built with passion in my spare time.<br />
-							If this tool improved your workflow, consider supporting the project to fuel the next update.</p>
-						</header>
-						<ul class="actions stacked">
-							<li><a href="https://www.buymeacoffee.com/patrickgoud" target="_blank" class="button fit primary icon solid fa-coffee">Buy me a Coffee ☕</a></li>
-							<li><a href="https://ko-fi.com/patrickgoud" target="_blank" class="button fit icon solid fa-mug-hot">Support on Ko-fi</a></li>
-						</ul>
-					</div>
-				</section>
+                    <!-- Video Card 6 -->
+                    <div class="video-card glass fade-in delay-2">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/5LWB3W06x-g/hqdefault.jpg')">
+                            <div class="play-btn"></div>
+                            <div class="duration">0:56</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Viewing animated and rigged characters on the Meta Quest 3</h3>
+                            <a href="https://youtu.be/5LWB3W06x-g" target="_blank" class="watch-link">Watch on YouTube ↗</a>
+                        </div>
+                    </div>
 
-				<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="https://www.buymeacoffee.com/patrickgoud" target="_blank" class="icon solid fa-coffee"><span class="label">Buy me a Coffee</span></a></li>
-							<li><a href="https://ko-fi.com/patrickgoud" target="_blank" class="icon solid fa-mug-hot"><span class="label">Ko-fi</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Glimpse 3D</li>
-							<li><a href="privacy.html">Privacy Policy</a></li>
-							<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+                    <!-- Video Card 7 -->
+                    <div class="video-card glass fade-in">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/ulNpjjcuTco/hqdefault.jpg')">
+                            <div class="play-btn"></div>
+                            <div class="duration">1:43</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Glimpse GLB navigation in Meta Quest 3</h3>
+                            <a href="https://youtu.be/ulNpjjcuTco" target="_blank" class="watch-link">Watch on YouTube ↗</a>
+                        </div>
+                    </div>
 
-			</div>
+                    <!-- Video Card 8 -->
+                    <div class="video-card glass fade-in delay-1">
+                        <div class="video-thumbnail" style="background-image: url('https://img.youtube.com/vi/JfZbP3W_88U/hqdefault.jpg')">
+                            <div class="play-btn"></div>
+                            <div class="duration">1:40</div>
+                        </div>
+                        <div class="video-info">
+                            <h3>Animated objects from Blender to the Meta Quest</h3>
+                            <a href="https://youtu.be/JfZbP3W_88U" target="_blank" class="watch-link">Watch on YouTube ↗</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-center fade-in">
+                     <a href="https://www.youtube.com/@glimpse-glb" target="_blank" class="btn btn-outline btn-lg">View All Tutorials</a>
+                </div>
+            </div>
+        </section>
 
-		<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        <!-- Development Roadmap Section -->
+        <section class="roadmap section bg-overlay" id="roadmap">
+            <div class="container container-sm">
+                <div class="section-header fade-in">
+                    <h2 class="section-title">The Future of Glimpse</h2>
+                    <p class="section-desc">Glimpse is evolving from a hobby project into a professional tool. Here's what's coming to the Pro version.</p>
+                </div>
+                
+                <div class="roadmap-timeline">
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h4>Hands-Free Manipulation</h4>
+                            <p>Hand Tracking 2.0 integration to ditch controllers and manipulate objects with natural gestures.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h4>Multi-Model Staging</h4>
+                            <p>Load, arrange, and compose multiple 3D files to create complete scenes directly in stand-alone VR.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h4>Hierarchy Explorer</h4>
+                            <p>Deep dive into your 3D model's node structure with granular visibility toggles to inspect individual parts.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item fade-in">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content glass">
+                            <h4>Pro Environments</h4>
+                            <p>Exclusive access to studio-grade lighting setups to showcase products with unmatched fidelity.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	</body>
+        <!-- Support Section -->
+        <section class="support section" id="support">
+            <div class="container">
+                <div class="support-grid">
+                    <div class="support-info fade-in">
+                        <h2 class="section-title text-left">Help shape the app</h2>
+                        <p>Glimpse is built with passion in my spare time through invaluable user feedback. If this tool improved your workflow, consider supporting the project to fuel the next update.</p>
+                        
+                        <div class="support-buttons mt-4">
+                            <a href="https://github.com/patrickgoud2/Glimpse-glb/issues/new?template=feature_request.md" target="_blank" class="btn btn-secondary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+                                Request Feature
+                            </a>
+                            <a href="https://github.com/patrickgoud2/Glimpse-glb/issues/new?template=bug_report.md" target="_blank" class="btn btn-secondary">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="8" rx="2"/><path d="M3 10h18"/></svg>
+                                Report Bug
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-card glass fade-in delay-1">
+                        <div class="coffee-icon">☕</div>
+                        <h3>Support the Creator</h3>
+                        <p>If Glimpse has been useful to you, a coffee goes a long way in supporting late-night coding sessions.</p>
+                        <div class="donation-links">
+                            <a href="https://www.buymeacoffee.com/patrickgoud" target="_blank" class="btn btn-coffee w-full">Buy me a Coffee</a>
+                            <a href="https://ko-fi.com/patrickgoud" target="_blank" class="btn btn-kofi w-full">Support on Ko-fi</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon"></span>
+                        Glimpse <span class="logo-highlight">3D</span>
+                    </a>
+                    <p>The essential 3D model viewer for Meta Quest.<br>Built with passion for the MR community.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Resources</h4>
+                        <a href="https://github.com/users/patrickgoud2/projects/1" target="_blank">Roadmap Board</a>
+                        <a href="support.html">Support Center</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Connect</h4>
+                        <a href="https://github.com/patrickgoud2/Glimpse-glb" target="_blank">GitHub</a>
+                        <a href="https://x.com" target="_blank">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Glimpse 3D. All rights reserved.</p>
+                <div class="credits">Designed & Developed locally.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
 </html>
-
