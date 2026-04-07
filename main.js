@@ -142,4 +142,43 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+    // 7. Lightbox Gallery Logic
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxClose = document.querySelector('.lightbox-close');
+
+    if (lightbox && lightboxImg) {
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const src = item.getAttribute('data-src');
+                if (src) {
+                    lightboxImg.src = src;
+                    lightbox.classList.add('active');
+                }
+            });
+        });
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('active');
+            // Timeout to clear src after fade out
+            setTimeout(() => {
+                if(!lightbox.classList.contains('active')) lightboxImg.src = '';
+            }, 300);
+        };
+
+        lightboxClose?.addEventListener('click', closeLightbox);
+        
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                closeLightbox();
+            }
+        });
+    }
 });
