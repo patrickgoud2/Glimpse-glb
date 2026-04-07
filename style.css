@@ -645,6 +645,16 @@ p {
   font-size: 0.8rem;
   font-weight: 600;
   z-index: 2;
+  transition: var(--transition);
+}
+
+.video-card.playing .play-btn {
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.video-card.playing .duration {
+  opacity: 0;
 }
 
 .video-info {

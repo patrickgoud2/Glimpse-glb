@@ -117,4 +117,29 @@ document.addEventListener('DOMContentLoaded', () => {
             visualCard.style.transition = 'none';
         });
     }
+
+    // 6. Video Card GIF Hover Effect
+    document.querySelectorAll('.video-card').forEach(card => {
+        const thumb = card.querySelector('.video-thumbnail');
+        if (!thumb) return;
+        
+        const gifUrl = thumb.getAttribute('data-gif');
+        if (gifUrl) {
+            // Preload gif on page load for smoother transition
+            const img = new Image();
+            img.src = gifUrl;
+            
+            const originalBg = thumb.style.backgroundImage;
+            
+            card.addEventListener('mouseenter', () => {
+                thumb.style.backgroundImage = `url('${gifUrl}')`;
+                card.classList.add('playing');
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                thumb.style.backgroundImage = originalBg;
+                card.classList.remove('playing');
+            });
+        }
+    });
 });
